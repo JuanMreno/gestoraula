@@ -42,7 +42,7 @@
 
 	function goToMain(){
 		$('body').removeClass('in-login');
-		$('#cont').load('views/main.html');
+		$('#cont').load('views/pract_lab.html');
 	}
 
 	loginInit();

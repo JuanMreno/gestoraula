@@ -222,7 +222,7 @@
 
 	} 
 
-/* Grid */
+/* Grid 
 
 	.row {
 		border-bottom: solid 1px transparent;
@@ -1553,13 +1553,13 @@
 			margin-left: 8.33333%;
 		}
 
-	}
+	}*/
 
 /* Basic */
 
 	body {
 		background: #E7ECEB;
-		font-family: 'Lato', sans-serif;
+		font-family: 'Lato', sans-serif !important;
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
@@ -2272,18 +2272,20 @@
 	.labelStateCont {
 	    text-align: -webkit-right;
 	}
-	/*
-	span.label {
-		right: 2.5em;
-	    position: fixed;
-	    top: 0.9em;
-	}*/
+	
+	.field-label {
+	    font-size: 14px;
+	    font-weight: 400;
+	    line-height: 1;
+	    color: #555;
+	    padding: 0px 0px 9px;
+	}
 
 	input {
 		line-height: normal; 
 	}
 
-	input .form-control.only-read {
+	input.form-control.only-read,textarea.form-control.only-read {
 		pointer-events: none;
 	}
 
@@ -2326,6 +2328,10 @@
 		#main {
 			margin-left: 20%;
 		}		
+	}
+
+	.inputContDropDown {
+		text-align: right;
 	}	
 
 	@media screen and (min-width: 961px) and (max-width: 2180px) {
@@ -2725,7 +2731,6 @@
 		#estMatDropdown  {
 			vertical-align:baseline;
 		}
-
 	}
 
 	/* Mobile */
