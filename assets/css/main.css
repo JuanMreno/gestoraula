@@ -2231,15 +2231,18 @@
 		padding: 0px;
 	}
 
-	input.jsgrid-button.jsgrid-edit-button {
-		display: none;
-	}
-
 	input.jsgrid-button.jsgrid-delete-button {
 		margin-left: 0px;
 	}
 		
-	.estTable .jsgrid-delete-button {
+	.estTable .jsgrid-delete-button,
+	.consTable .jsgrid-delete-button,
+	.rankTable .jsgrid-delete-button,
+	.anunEstTable .jsgrid-delete-button,
+	.estTable .jsgrid-edit-button,
+	.consTable .jsgrid-edit-button,
+	.rankTable .jsgrid-edit-button,
+	.anunEstTable .jsgrid-edit-button {
 		display: none;
 	}
 

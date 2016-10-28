@@ -42,7 +42,10 @@
 
 	function goToMain(){
 		$('body').removeClass('in-login');
-		$('#cont').load('views/pract_lab.html');
+		//$('#cont').load('views/pract_lab.html');
+		//$('#cont').load('views/consultas.html');
+		//$('#cont').load('views/ranking.html');
+		$('#cont').load('views/anuncios_user.html');
 	}
 
 	loginInit();
