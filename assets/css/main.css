@@ -2303,6 +2303,10 @@
 	    font-weight: 400;
 	}
 
+	.nav-menu-li {
+		display: none
+	}
+
 	@media screen and (min-width: 961px) and (max-width: 2200px) {
 
 		#header {

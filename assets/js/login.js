@@ -11,6 +11,7 @@
 			loadIntervaId = setInterval(loginLoader, 400);
 			setTimeout( function(){ 
 					clearInterval(loadIntervaId);
+					$.cookie(SESSION_COOKIE, {id:"1",name:"Oscar Moreno",rol:"pro-rol",rolName:"Profesor"});
 					goToMain();
 				}, 4000);
 
@@ -42,12 +43,11 @@
 
 	function goToMain(){
 		$('body').removeClass('in-login');
-		//$('#cont').load('views/pract_lab.html');
-		//$('#cont').load('views/consultas.html');
-		//$('#cont').load('views/ranking.html');
-		$('#cont').load('views/anuncios_user.html');
+		$('#cont').load('views/main.html',function(){
+
+		});
 	}
 
 	loginInit();
-	goToMain();
+	//goToMain();
 })(jQuery);
