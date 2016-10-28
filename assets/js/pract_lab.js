@@ -103,7 +103,7 @@
                 paging: true,
                 editting: true,
                 autoload: true,
-                pageSize: 5,
+                pageSize: 10,
                 pageButtonCount: 5,
                 noDataContent: "Ningún dato encontrado.",
                 controller: db,
@@ -153,7 +153,30 @@
                 ]
             });
 
-	    $('input[name="daterange"]').daterangepicker();
+	    $dateFchas = $('#practLabFchas');
+	    $dateFchas.daterangepicker({
+    		locale: {
+				format: 'DD-MM-YYYY'
+			},
+			startDate: moment().format('DD/MM/YYYY'),
+			endDate: moment().add(30,"days").format('DD/MM/YYYY'),
+			opens: "left"
+		});
+
+	    $('#downloadGeneralReport').on('click', function(event) {
+	    	event.preventDefault();
+
+	    	var data = {
+	    		name:"Juan Camilo Moreno",
+	    		date:'2016-01-01',
+	    		group:"11-A",
+	    		subject:"Matemáticas",
+	    		rows:db.clients
+	    	}
+	    	
+    	 	const pdfConst = new PdfMakeConstructor("juan_report.pdf");
+    	 	pdfConst.makeStudentReport(data);
+	    });
 	}
 
 	mainInit();

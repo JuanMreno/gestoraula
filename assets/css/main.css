@@ -2294,7 +2294,7 @@
 	}
 
 	input[name="daterange"] {
-		font-size: large;
+		font-size: initial;
 	    width: inherit;
 	    padding: 3px;
 	    font-weight: 400;
