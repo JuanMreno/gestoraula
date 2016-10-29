@@ -1591,12 +1591,6 @@
 		line-height: 1.5em;
 	}
 
-	select {
-	    background-color: #e6e6e6 !important;
-		font-weight: 300;
-		color: #666;
-	}
-
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		color: inherit;
 		text-decoration: none;
@@ -1805,7 +1799,6 @@
 	.default-form input[type="text"],
 	.default-form input[type="email"],
 	.default-form input[type="password"],
-	.default-form select,
 	.default-form textarea {
 		position: relative;
 		-webkit-appearance: none;
@@ -1828,7 +1821,6 @@
 		.default-form input[type="text"]:focus,
 		.default-form input[type="email"]:focus,
 		.default-form input[type="password"]:focus,
-		.default-form select:focus,
 		.default-form textarea:focus {
 			box-shadow: 0 0 2px 1px #8ebebc;
 			background: #fff;
@@ -1836,8 +1828,7 @@
 
 	.default-form input[type="text"],
 	.default-form input[type="email"],
-	.default-form input[type="password"],
-	.default-form select {
+	.default-form input[type="password"] {
 		line-height: 1.25em;
 	}
 
@@ -1867,16 +1858,6 @@
 
 	.default-form ::-moz-focus-inner {
 		border: 0;
-	}
-
-	select.d-select {
-		-webkit-appearance: none;
-	    font-family: "Lato";
-	    font-weight: 700;
-	    padding: 8px 10px 8px 10px;
-	    background-color: #e8edec;
-	    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
-        vertical-align: text-top;
 	}
 
 /* Item */
@@ -2307,6 +2288,21 @@
 		display: none
 	}
 
+	/*/////// Select2 	*//////////////////////////////
+	.select2-dropdown {
+	    font-size: initial;
+	}
+
+	li.select2-results__option {
+		padding: 0px 0px 0px 10px
+	}
+
+	span.select2-selection__rendered {
+		font-size: inherit;
+        color: #888 !important;
+	    font-weight: initial;
+	}
+
 	@media screen and (min-width: 961px) and (max-width: 2200px) {
 
 		#header {
@@ -2537,7 +2533,7 @@
 				overflow-x: hidden;
 			}
 
-			body, input, textarea, select {
+			body, input, textarea {
 				font-size: 16pt;
 			}
 
@@ -2746,7 +2742,7 @@
 
 		/* Basic */
 
-			body, input, textarea, select {
+			body, input, textarea {
 				font-size: 14pt;
 			}
 

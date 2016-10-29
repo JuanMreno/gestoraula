@@ -51,6 +51,7 @@
 
 		$( window ).resize(function() {
 			w = $(".container").width();
+            console.log("resize_anun");
 
 			if(w > 600){
 				jsGridParams.fields[0].width = parseInt( 0.2 * w );

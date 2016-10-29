@@ -287,4 +287,65 @@
         { "Id":1, "Profesor":"Oscar Moreno", "Titulo":"Quiz próxima semana", "Contenido": "El día viernes se realizará un quiz del último tema visto.", "Fecha":"12/11/2015" }
     ];
 
+    /////////////////////////   PRACTICAS   ////////////////////////////////////////////////
+    var dbPracs = {
+
+        loadData: function(filter) {
+            return $.grep(this.clients, function(client) {
+                return (!filter.Practica || client.Practica.indexOf(filter.Practica) > -1)
+                    && (!filter.Fecha || client.Fecha.indexOf(filter.Fecha) > -1)
+                    && (filter.Estado === undefined || client.Estado === filter.Estado)
+                    && (!filter.Entrega || client.Entrega.indexOf(filter.Entrega) > -1)
+                    && (!filter.Intentos || client.Intentos.indexOf(filter.Intentos) > -1)
+                    && (!filter.N_PROFESOR || client.N_PROFESOR.indexOf(filter.N_PROFESOR) > -1)
+                    && (!filter.N_APP || client.N_APP.indexOf(filter.N_APP) > -1)
+                    && (!filter.N_FINAL || client.N_FINAL.indexOf(filter.N_FINAL) > -1)
+            });
+        },
+
+        insertItem: function(insertingClient) {
+            this.data.push(insertingClient);
+        },
+
+        updateItem: function(updatingClient) { },
+
+        deleteItem: function(deletingClient) {
+            var clientIndex = $.inArray(deletingClient, this.data);
+            this.data.splice(clientIndex, 1);
+        }
+
+    };
+
+    window.dbPracs = dbPracs;
+
+    dbPracs.data = [
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." },
+        { "Id":1, "Practica": "Ondas estacionárias", "Unidad": "Mecánica clásica", "Fecha": "25/10/2016", "Estado": true, "Entrega":2, "Intentos":2, "N_PROFESOR":"3.5", "N_APP":"4.5", "N_FINAL":"4", "OBSRV":"Conclusiones acertadas y coherentes." }
+    ];
+
 }());

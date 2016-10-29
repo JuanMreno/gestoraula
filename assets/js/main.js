@@ -104,9 +104,11 @@
 		switch(session.rol){
 			case PRO_ROL:
 				$('#section').load('views/consultas.html');
+				$('#cons-link').addClass('active');
 				break;
 			case EST_ROL:
 				$('#section').load('views/pract_lab.html');
+				$('#pract-link').addClass('active');
 				break;
 			default:
 				break;
@@ -133,7 +135,7 @@
 			$('.nav-menu-li a').removeClass('active');
 			$(this).addClass('active');
 
-			$('#section').load('views/eval.html');
+			$('#section').load('views/evaluacion.html');
 		});
 		
 		$('#rank-link').off("click").on('click', function(event) {

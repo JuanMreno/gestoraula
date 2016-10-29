@@ -22,7 +22,7 @@ var SAD_ROL = 'sad-rol';;
 		$.cookie.json = true;
 
 		//$.cookie(SESSION_COOKIE, {id:"1",name:"Juan Camilo",rol:"est-rol",rolName:"Estudiante"});
-		//$.cookie(SESSION_COOKIE, {id:"1",name:"Oscar Moreno",rol:"pro-rol",rolName:"Profesor"});
+		$.cookie(SESSION_COOKIE, {id:"1",name:"Oscar Moreno",rol:"pro-rol",rolName:"Profesor"});
 		var sesion = $.cookie(SESSION_COOKIE);
 
 		// Disable animations/transitions until the page has loaded.
